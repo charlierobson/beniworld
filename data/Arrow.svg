@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="480">
+    <desc iVinci="yes" version="4.5" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
+    <g id="Layer1" opacity="1">
+        <g id="Shape1">
+            <desc shapeID="1" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-14.0077,-18,28.0154,36)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(-1.42827,-0.0138175,0.0128985,-1.33327,0.000556469,-23.9989)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath1" d="M20.0068,-23.7477 L-0.231613,0 L-20.0068,-24.1348 L-10.0034,-24.0381 L-9.77064,-48.0945 L10.2361,-47.901 L10.0034,-23.8445 L20.0068,-23.7477 Z" style="stroke:#000000;stroke-opacity:1;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:nonzero;fill:#ff0000;fill-opacity:1;"/>
+        </g>
+    </g>
+</svg>

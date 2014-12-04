@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="777" height="480">
+    <desc iVinci="yes" version="4.5" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
+    <g id="Layer1" opacity="1">
+        <g id="Shape1">
+            <desc shapeID="1" type="0" basicInfo-basicType="4" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-6.5,-1.5,13,3)" text="" font-familyName="Helvetica" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(1,0,0,0.111111,-8,-1.16667)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath1" d="M-14.5,-1.16667 C-14.5,-1.25871 -11.5899,-1.33333 -8,-1.33333 C-4.41015,-1.33333 -1.5,-1.25871 -1.5,-1.16667 C-1.5,-1.07462 -4.41015,-1 -8,-1 C-11.5899,-1 -14.5,-1.07462 -14.5,-1.16667 Z" style="stroke:#222222;stroke-opacity:1;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:evenodd;fill:#2d95d5;fill-opacity:1;"/>
+        </g>
+        <g id="Shape2">
+            <desc shapeID="2" type="0" basicInfo-basicType="4" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-6.5,-1.5,13,3)" text="" font-familyName="Helvetica" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(1,0,0,0.111111,8.5,-1.33333)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath2" d="M2,-1.33333 C2,-1.42538 4.9101,-1.5 8.5,-1.5 C12.0899,-1.5 15,-1.42538 15,-1.33333 C15,-1.24129 12.0899,-1.16667 8.5,-1.16667 C4.9101,-1.16667 2,-1.24129 2,-1.33333 Z" style="stroke:#222222;stroke-opacity:1;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:evenodd;fill:#2d95d5;fill-opacity:1;"/>
+        </g>
+    </g>
+</svg>

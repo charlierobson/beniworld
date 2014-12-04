@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="480">
+    <desc iVinci="yes" version="4.5" gridStep="20" showGrid="yes" snapToGrid="no" codePlatform="0"/>
+    <g id="Layer1" opacity="1">
+        <g id="Shape1">
+            <desc shapeID="1" type="0" basicInfo-basicType="1" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-99.5,-59,199,118)" text="" font-familyName="Helvetica" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(1,0,0,1,0,0)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath1" d="M-99.5,-59 L99.5,-59 L99.5,59 L-99.5,59 L-99.5,-59 Z" style="stroke:url(#patternStroke1);stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:evenodd;fill:#ff2b5b;fill-opacity:1;"/><defs><pattern id="patternStroke1" patternUnits="userSpaceOnUse" x="0" y="0" width="0" height="0" patternTransform="matrix(1,0,0,1,0,0)"><image id="patternImagepatternStroke1_" x="0" y="0" width="0" height="0" xlink:href="data:image/png;base64,"/></pattern></defs>
+        </g>
+        <g id="Shape2">
+            <desc shapeID="2" type="0" basicInfo-basicType="1" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-24,-55,48,110)" text="" font-familyName="Helvetica" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(1,0,0,1,-71.5,0)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath2" d="M-95.5,-55 L-47.5,-55 L-47.5,55 L-95.5,55 L-95.5,-55 Z" style="stroke:url(#patternStroke2);stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:evenodd;fill:#fffbf6;fill-opacity:1;"/><defs><pattern id="patternStroke2" patternUnits="userSpaceOnUse" x="0" y="0" width="0" height="0" patternTransform="matrix(1,0,0,1,-71.5,0)"><image id="patternImagepatternStroke2_" x="0" y="0" width="0" height="0" xlink:href="data:image/png;base64,"/></pattern></defs>
+        </g>
+    </g>
+</svg>

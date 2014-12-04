@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="777" height="480">
+    <desc iVinci="yes" version="4.5" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
+    <g id="Layer1" opacity="1">
+        <g id="Shape1">
+            <desc shapeID="1" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-41.5,-41,83,82)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(0.891566,0,0,0.914634,-4.0709,4.311)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath1" d="M-41.0709,4.31104 C-41.0709,-16.4072 -24.5129,-33.189 -4.07087,-33.189 C16.3711,-33.189 32.9291,-16.4072 32.9291,4.31104 C32.9291,25.0293 16.3711,41.811 -4.07087,41.811 C-24.5129,41.811 -41.0709,25.0293 -41.0709,4.31104 Z" style="stroke:#222222;stroke-opacity:1;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:evenodd;fill:#2d95d5;fill-opacity:1;"/>
+        </g>
+    </g>
+</svg>
