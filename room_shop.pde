@@ -24,6 +24,7 @@ class room_hatshop extends roomActor
       "data/hat_red.svg", "data/hat_green.svg",
       "data/hat_beany.svg", "data/hat_colander.svg",
     };
+
     int x = 80;
     for (String itemName : itemNames)
     {
@@ -38,7 +39,7 @@ class room_hatshop extends roomActor
     if (lastRoomName.equals("plaza"))
     {
       broadcast("movebeni 100,400");
-      _shopkeeper.say("Hi. Would you like to buy a lovely hat?", 2000);
+      _shopkeeper.say("Hi. Would you like to buy a lovely hat?");
     }
   }
 

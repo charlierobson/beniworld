@@ -113,6 +113,11 @@ class characterActor extends actor
     }
   }
 
+  void say(String speechBubbleText)
+  {
+    say(speechBubbleText, 3500);
+  }
+  
   void say(String speechBubbleText, int speechBubbleTime)
   {
     _speechBubbleTime = speechBubbleTime;

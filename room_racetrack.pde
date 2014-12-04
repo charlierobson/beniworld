@@ -29,12 +29,12 @@ class room_racetrack extends roomActor
       if (_competitor._x >= 700)
       {
         _raceWinner = _competitor;
-        _competitor.say("I win! Better luck next time!", 4000);
+        _competitor.say("I win! Better luck next time!");
       }
       if (beni._x >= 700)
       {
         _raceWinner = beni;
-        _competitor.say("You win! I'll beat you next time!", 4000);
+        _competitor.say("You win! I'll beat you next time!");
         ++_raceXP;
       }
 
@@ -67,10 +67,10 @@ class room_racetrack extends roomActor
       _competitor._timer = 0;
       if (_raceXP == 0)
       {
-        _competitor.say ("Race You! Press space to run", 4000);
+        _competitor.say ("Race You! Press space to run");
       } else if (_raceXP == 1)
       {
-        _competitor.say ("Hello Again! Ready to be beaten?", 4000);
+        _competitor.say ("Hello Again! Ready to be beaten?");
       } else
       {
         String[] wittySayings =
@@ -78,7 +78,7 @@ class room_racetrack extends roomActor
           "Ha! You won't win this time!", 
           "Be sure to take breaks between racing! Or not."
         };
-        _competitor.say (wittySayings[(int)random(wittySayings.length)], 4000);
+        _competitor.say (wittySayings[(int)random(wittySayings.length)]);
       }
       broadcast("movebeni 50,315");
     }
