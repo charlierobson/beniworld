@@ -153,3 +153,39 @@ class furnitureActor extends actor
   }
 }
 
+
+
+class labelActor extends actor
+{
+  String _labelText;
+  
+  public labelActor(String labelText, int x, int y, int z)
+  {
+    super();
+
+    _labelText = labelText;
+    _sprite = loadShape("data/label.svg");
+    _x = x;
+    _y = y;
+    _z = z;
+  }
+  
+  public labelActor(String labelText, int x, int y)
+  {
+    super();
+
+    _labelText = labelText;
+    _sprite = loadShape("data/label.svg");
+    _x = x;
+    _y = y;
+  }
+
+  void draw()
+  {
+    shape(_sprite, _x, _y);
+    textAlign(CENTER, CENTER);
+    textSize(10);
+    text(_labelText, _x, _y);
+  }
+}
+
