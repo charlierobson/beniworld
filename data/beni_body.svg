@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="777" height="480">
-                                    <title>my vector image</title>
-                                    <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->
-                                    <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF" stroke="none"/>
-                                <g class="currentLayer"><title>Layer 1</title><path fill="#d5d50b" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-41.07087182998657,0.81103515625 C-41.07087182998657,-21.8409423828125 -22.499048709869385,-40.18896484375 0.42912817001342773,-40.18896484375 C23.35730504989624,-40.18896484375 41.92912817001343,-21.8409423828125 41.92912817001343,0.81103515625 C41.92912817001343,23.46295166015625 23.35730504989624,41.81103515625 0.42912817001342773,41.81103515625 C-22.499048709869385,41.81103515625 -41.07087182998657,23.46295166015625 -41.07087182998657,0.81103515625 z" id="svg_3" class=""/></g></svg>
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="777" height="480">
+    <desc iVinci="yes" version="4.5" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
+    <g id="Layer1" opacity="1">
+        <g id="Shape1">
+            <desc shapeID="1" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-41.5,-41,83,82)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(1,0,0,1,0.429127,0.811035)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+            <path id="shapePath1" d="M-41.0709,0.811035 C-41.0709,-21.8409 -22.499,-40.189 0.429128,-40.189 C23.3573,-40.189 41.9291,-21.8409 41.9291,0.811035 C41.9291,23.463 23.3573,41.811 0.429128,41.811 C-22.499,41.811 -41.0709,23.463 -41.0709,0.811035 Z" style="stroke:#222222;stroke-opacity:1;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:2;stroke-linecap:butt;fill-rule:nonzero;fill:#d5d50b;fill-opacity:1;"/>
+        </g>
+    </g>
+</svg>
