@@ -29,6 +29,10 @@ class actor implements Comparable<actor>
     else if (p._z > this._z) return -1;
     else return 0;
   }
+
+  void executeAction(String[] actionTokens)
+  {
+  }
 }
 
 
@@ -42,6 +46,7 @@ class characterActor extends actor
 
   int _blinkRate;
   int _blinkTime;
+  Boolean _eyesFollowYou;
 
   int _speechBubbleTime;
   String _speechBubbleText;
@@ -59,6 +64,8 @@ class characterActor extends actor
 
     _blinkRate = 3000 + (1000 - (int)random(2000));
     _blinkTime = 100;
+
+    _eyesFollowYou = false;
   }
 
   public void update(int ticks)
@@ -99,9 +106,15 @@ class characterActor extends actor
 
     shape(_sprite, _x, _y);
 
-    if (_blinkTime < 0)
+    int x = _x;
+    if (_eyesFollowYou)
     {
-      shape(_eyes_blink, _x, _y);
+      x += (beni._x - 400) / 40;
+    }
+
+    if (_blinkTime < 0)
+    {    
+      shape(_eyes_blink, x, _y);
 
       if (_blinkTime < -50)
       {
@@ -109,7 +122,7 @@ class characterActor extends actor
       }
     } else
     {
-      shape(_eyes_open, _x, _y);
+      shape(_eyes_open, x, _y);
     }
   }
 
@@ -117,7 +130,7 @@ class characterActor extends actor
   {
     say(speechBubbleText, 3500);
   }
-  
+
   void say(String speechBubbleText, int speechBubbleTime)
   {
     _speechBubbleTime = speechBubbleTime;
@@ -137,7 +150,7 @@ class furnitureActor extends actor
     _y = y;
     _z = z;
   }
-  
+
   public furnitureActor(String imageFilename, int x, int y)
   {
     super();
@@ -151,6 +164,20 @@ class furnitureActor extends actor
   {
     shape(_sprite, _x, _y);
   }
+
+  void executeAction(String[] actionTokens)
+  {
+    if (actionTokens[0].equals("click"))
+    {
+      int x = Integer.parseInt(actionTokens[1]);
+      int y = Integer.parseInt(actionTokens[2]);
+      float d = dist(_x,_y,x,y);
+      if (d < 40)
+      {
+        beni._hat = _sprite;
+      }  
+    }
+  }
 }
 
 
@@ -158,7 +185,7 @@ class furnitureActor extends actor
 class labelActor extends actor
 {
   String _labelText;
-  
+
   public labelActor(String labelText, int x, int y, int z)
   {
     super();
@@ -169,7 +196,7 @@ class labelActor extends actor
     _y = y;
     _z = z;
   }
-  
+
   public labelActor(String labelText, int x, int y)
   {
     super();

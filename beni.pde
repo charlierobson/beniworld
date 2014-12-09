@@ -1,6 +1,6 @@
 class beniActor extends characterActor
 {
-  PShape _hat;
+  public PShape _hat;
 
   public beniActor()
   {

@@ -6,6 +6,8 @@ class roomActor extends actor
   ArrayList<actor> _furniture;
   ArrayList<actor> _occupants;
 
+  ArrayList<actor> _sortedActors;
+
   String _name;
 
   carpet _carpet;
@@ -17,6 +19,8 @@ class roomActor extends actor
     _doors = new ArrayList<trigger>();
     _furniture = new ArrayList<actor>();
     _occupants = new ArrayList<actor>();
+
+    _sortedActors = new ArrayList<actor>();
   }
 
   actor addOccupant(actor occupant)
@@ -32,13 +36,7 @@ class roomActor extends actor
       _carpet.draw();
     }
 
-    ArrayList<actor> sortedActors = new ArrayList<actor>();
-    sortedActors.addAll(_furniture); //<>//
-    sortedActors.addAll(_occupants);
-    sortedActors.add(beni);
-    Collections.sort(sortedActors);
-
-    for (actor act : sortedActors)
+    for (actor act : _sortedActors)
     {
       act.draw();
     }
@@ -48,7 +46,7 @@ class roomActor extends actor
   void update(int ticks)
   {
     super.update(ticks);
-    
+
     for (actor occupant : _occupants)
     {
       occupant.update(ticks);
@@ -58,6 +56,12 @@ class roomActor extends actor
     {
       door.check(beni);
     }
+
+    _sortedActors.clear();
+    _sortedActors.addAll(_furniture);
+    _sortedActors.addAll(_occupants);
+    _sortedActors.add(beni);
+    Collections.sort(_sortedActors);
   }
 
   // when a trigger or other interaction needs to inform objects to update their state
@@ -70,6 +74,12 @@ class roomActor extends actor
       currentRoom = getRoom(actionTokens[1]);
       println(currentRoom._name);
       currentRoom.whenEnteredFrom(_name);
+      return;
+    }
+
+    for (int i = _sortedActors.size() - 1; i != -1; --i)
+    {
+      _sortedActors.get(i).executeAction(actionTokens);
     }
   }
 

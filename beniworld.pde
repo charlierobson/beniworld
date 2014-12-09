@@ -59,14 +59,14 @@ roomActor getRoom(String name)
   return null;
 }
 
-
+// should the broadcast be received by the originator?
 void broadcast(String actionCollection)
 {
   String[] actions = actionCollection.split("[|]");
   for (String action : actions)
   {
     println(action);
-    
+
     String[] actionTokens = action.split("[, ]+");
 
     beni.executeAction(actionTokens);
@@ -82,5 +82,9 @@ void keyPressed()
 void keyReleased()
 {
   currentRoom.keyReleased(key, keyCode);
+}
+
+void mouseClicked() {
+  broadcast("click " +mouseX +","+mouseY);
 }
 
