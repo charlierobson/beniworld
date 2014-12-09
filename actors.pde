@@ -91,6 +91,8 @@ class characterActor extends actor
       int w = 150;
       int h = 2*(w/3);
 
+      h += 20 * (_speechBubbleText.length() / 20);
+
       int x = _x - w / 2;
       int y = _y - (h + 20);
       y -= 50; // fudge relating to half height of character;
@@ -164,7 +166,24 @@ class furnitureActor extends actor
   {
     shape(_sprite, _x, _y);
   }
+}
 
+
+class itemActor extends furnitureActor
+{
+  int _price;
+  String _description;
+  String _clickedAction;
+  
+  public itemActor(String imageFilename, int x, int y, String description, int price, String clickedAction)
+  {
+    super(imageFilename, x, y);
+
+    _clickedAction = clickedAction;
+    _description = description;
+    _price = price;
+  }
+  
   void executeAction(String[] actionTokens)
   {
     if (actionTokens[0].equals("click"))
@@ -174,12 +193,11 @@ class furnitureActor extends actor
       float d = dist(_x,_y,x,y);
       if (d < 40)
       {
-        beni._hat = _sprite;
+        broadcast(_clickedAction);
       }  
     }
   }
 }
-
 
 
 class labelActor extends actor

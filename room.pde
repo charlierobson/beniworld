@@ -57,6 +57,8 @@ class roomActor extends actor
       door.check(beni);
     }
 
+    // sort all of the objects by their _z coordinate.
+    // when it comes time to draw them they will be drawn from back to front
     _sortedActors.clear();
     _sortedActors.addAll(_furniture);
     _sortedActors.addAll(_occupants);
