@@ -51,6 +51,10 @@ class characterActor extends actor
   int _speechBubbleTime;
   String _speechBubbleText;
 
+  int _bubbleTime;
+  String[] _bubbleTexts;
+  int _bubbleTextIndex;
+
   public characterActor(String characterName)
   {
     super();
@@ -79,7 +83,16 @@ class characterActor extends actor
       _speechBubbleTime -= ticks;
       if (_speechBubbleTime < 0)
       {
-        _speechBubbleText = null;
+        ++_bubbleTextIndex;
+        if (_bubbleTextIndex == _bubbleTexts.length)
+        {
+          _speechBubbleText = null;
+        }
+        else
+        {
+          _speechBubbleTime += _bubbleTime;
+          _speechBubbleText = _bubbleTexts[_bubbleTextIndex];
+        }
       }
     }
   }
@@ -135,8 +148,12 @@ class characterActor extends actor
 
   void say(String speechBubbleText, int speechBubbleTime)
   {
+    _bubbleTexts = speechBubbleText.split("[|]");
+    _bubbleTextIndex = 0;
+
+    _bubbleTime = speechBubbleTime;
     _speechBubbleTime = speechBubbleTime;
-    _speechBubbleText = speechBubbleText;
+    _speechBubbleText = _bubbleTexts[0];
   }
 }
 
@@ -174,7 +191,7 @@ class itemActor extends furnitureActor
   int _price;
   String _description;
   String _clickedAction;
-  
+
   public itemActor(String imageFilename, int x, int y, String description, int price, String clickedAction)
   {
     super(imageFilename, x, y);
@@ -183,18 +200,18 @@ class itemActor extends furnitureActor
     _description = description;
     _price = price;
   }
-  
+
   void executeAction(String[] actionTokens)
   {
     if (actionTokens[0].equals("click"))
     {
       int x = Integer.parseInt(actionTokens[1]);
       int y = Integer.parseInt(actionTokens[2]);
-      float d = dist(_x,_y,x,y);
+      float d = dist(_x, _y, x, y);
       if (d < 40)
       {
         broadcast(_clickedAction);
-      }  
+      }
     }
   }
 }

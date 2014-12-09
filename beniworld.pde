@@ -59,7 +59,7 @@ roomActor getRoom(String name)
   return null;
 }
 
-// should the broadcast be received by the originator?
+// should the broadcast be received by the originator or sunk?
 void broadcast(String actionCollection)
 {
   String[] actions = actionCollection.split("[|]");

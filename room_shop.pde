@@ -6,6 +6,8 @@ class item
   
   public int _price;
   
+  public actor _actor;
+  
   PImage _image;
 
   public item(String name, int price, String description, String whenClicked)
@@ -24,6 +26,7 @@ class item
 
 
 ArrayList<item> _items;
+PShape _boughtItem;
 
 class hatShopKeeperActor extends characterActor
 {
@@ -34,14 +37,24 @@ class hatShopKeeperActor extends characterActor
   
   void executeAction(String[] actionTokens)
   {
-    if (actionTokens[0].equals("buy"))
+    if (actionTokens[0].equals("click"))
+    {
+      int x = Integer.parseInt(actionTokens[1]);
+      int y = Integer.parseInt(actionTokens[2]);
+      if (dist(_x, _y, x, y) < 25)
+      {
+        beni._hat = _boughtItem;
+      }
+    }
+    else if (actionTokens[0].equals("buy"))
     {
       String itemName = actionTokens[1];
       for (item it : _items)
       {
         if (it._name.equals(itemName))
         {
-          say("Ah yes. " + it._description + ". That will be " + it._price);
+          say("Ah yes. " + it._description + ". That will be " + it._price + ".");
+          _boughtItem = it._actor._sprite;
         }
       }
     }
@@ -60,8 +73,8 @@ class room_hatshop extends roomActor
     _items = new ArrayList<item>();
     _items.add(new item("hat_red", 100, "A lovely red cap", "buy hat_red"));
     _items.add(new item("hat_green", 100, "A stylish green Tam-O-Shanter", "buy hat_green"));
-    _items.add(new item("hat_beany", 250, "The Beany. One of a kind.", "buy hat_beany"));
-    _items.add(new item("hat_derp", 500, "Derpy glasses. A brilliant disguise.", "buy hat_derp"));
+    _items.add(new item("hat_beany", 250, "The Beany. One of a kind", "buy hat_beany"));
+    _items.add(new item("hat_derp", 500, "Derpy glasses. A brilliant disguise", "buy hat_derp"));
 
     _name = "hatshop";
     _carpet = new fancyCarpet("data/hatshop.png");
@@ -76,7 +89,8 @@ class room_hatshop extends roomActor
     int x = 80;
     for (item it : _items)
     {
-      _furniture.add(new itemActor(it.imageName(), x, 180, it._description, it._price, it._whenClicked));
+      it._actor = new itemActor(it.imageName(), x, 180, it._description, it._price, it._whenClicked);
+      _furniture.add(it._actor);
       _furniture.add(new labelActor(str(it._price), x, 185));
 
       x += 80;
@@ -88,7 +102,7 @@ class room_hatshop extends roomActor
     if (lastRoomName.equals("plaza"))
     {
       broadcast("movebeni 100,400");
-      _shopkeeper.say("Hi. Would you like to buy a lovely hat?");
+      _shopkeeper.say("Hi. Would you like to buy a lovely hat?|Click a hat then click on me to buy it.");
     }
   }
 
