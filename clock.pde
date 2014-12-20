@@ -3,7 +3,10 @@ abstract class timeSource
   abstract int hours();
   abstract int minutes();
   abstract int seconds();
+  
+  void update(int millis) {}
 }
+
 
 class realTimeClockSource extends timeSource
 {
@@ -22,11 +25,10 @@ class realTimeClockSource extends timeSource
 }
 
 
-
-class clock
+class clock extends actor
 {
   timeSource _timeSource;
-  int _x, _y;
+
   float _r;
 
   public clock(int x, int y, int r, timeSource source)
@@ -37,6 +39,12 @@ class clock
       _r = (float)r;
   }
 
+  void update(int millis)
+  {
+    super.update(millis);
+    _timeSource.update(millis);
+  }
+  
   void draw()
   {
     fill(255);
