@@ -39,6 +39,9 @@ void draw()
 
   // debug
   fill(0);
+  textAlign(LEFT, CENTER);
+  textSize(10);  
+  
   String beniInfo = currentRoom._name + "   x: " + beni._x + "  y: " + beni._y;
   text(beniInfo, 10, 20);
   beniInfo = "x: " + mouseX + "  y: " + mouseY;

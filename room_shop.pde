@@ -75,6 +75,8 @@ class room_hatshop extends roomActor
     _items.add(new item("hat_green", 100, "A stylish green Tam-O-Shanter", "buy hat_green"));
     _items.add(new item("hat_beany", 250, "The Beany. One of a kind", "buy hat_beany"));
     _items.add(new item("hat_derp", 500, "Derpy glasses. A brilliant disguise", "buy hat_derp"));
+    _items.add(new item("hat_top", 500, "A classy top hat. Classy.", "buy hat_top"));
+
 
     _name = "hatshop";
     _carpet = new fancyCarpet("data/hatshop.png");
@@ -86,14 +88,22 @@ class room_hatshop extends roomActor
     _doors.add(new trigger(0, 400, 75, "changeroom plaza"));
     _furniture.add(new furnitureActor("data/counter.svg", 400, 350, 120));
 
-    int x = 80;
+    int[] shelfStart = { 80, 400+80 };
+ 
+    int shelfPosition = 0;
     for (item it : _items)
     {
-      it._actor = new itemActor(it.imageName(), x, 180, it._description, it._price, it._whenClicked);
-      _furniture.add(it._actor);
-      _furniture.add(new labelActor(str(it._price), x, 185));
+      int shelfNumber = shelfPosition / 4;
+      int shelfSlot = shelfPosition % 4;
 
-      x += 80;
+      int shelfX = shelfStart[shelfNumber] + shelfSlot * 80;
+
+      it._actor = new itemActor(it.imageName(), shelfX, 180, it._description, it._price, it._whenClicked);
+
+      _furniture.add(it._actor);
+      _furniture.add(new labelActor(str(it._price), shelfX, 185));
+
+      ++shelfPosition;
     }
   }
 
