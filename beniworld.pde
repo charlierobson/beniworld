@@ -22,6 +22,7 @@ void setup()
   world.add(new room_plaza());
   world.add(new room_racetrack());
   world.add(new room_hatshop());
+  world.add(new room_closet());
 
   currentRoom = getRoom("home");
 } 
