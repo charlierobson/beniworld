@@ -22,7 +22,7 @@ class room_home extends roomActor
     {
       broadcast("movebeni 400,520");
     }
-    if (lastRoomName.equals("closet"))
+    else if (lastRoomName.equals("closet"))
     {
       broadcast("movebeni 400,100");
     }

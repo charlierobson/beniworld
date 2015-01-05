@@ -11,7 +11,7 @@ class trigger
     _y = y;
     _r = r;
     _actions = actions;
-    
+
     _state = 0; // not triggered
   }
 
@@ -26,12 +26,10 @@ class trigger
         _state = 1;
         broadcast(_actions);
       }
-    }
-    else
+    } else
     {
       // become untriggered
       _state = 0;
     }
   }
 }
-

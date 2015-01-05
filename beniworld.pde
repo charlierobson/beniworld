@@ -10,9 +10,14 @@ roomActor currentRoom;
 beniActor beni;
 
 
+inventory_hat hats;
+
+
 void setup()
 {
   size(sceneWidth, sceneHeight);
+
+  hats = new inventory_hat();
 
   beni = new beniActor();
   beni.say("Hi! My name is Beni! Welcome to my world :D", 3000);
@@ -74,7 +79,10 @@ void broadcast(String actionCollection)
     String[] actionTokens = action.split("[, ]+");
 
     beni.executeAction(actionTokens);
-    currentRoom.executeAction(actionTokens);
+    for (roomActor room : world)
+    {
+      room.executeAction(actionTokens);
+    }
   }
 }
 
