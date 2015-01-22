@@ -20,12 +20,15 @@ class hatShopKeeperActor extends characterActor
         say("Ah yes. " + it._description + ". That will be " + it._price + ".");
         _selectedItem = it;
       }
-    } else if (actionTokens[0].equals("click") && _selectedItem != null)
+    }
+    else if (actionTokens[0].equals("click") && _selectedItem != null)
     {
       int x = Integer.parseInt(actionTokens[1]);
       int y = Integer.parseInt(actionTokens[2]);
       if (dist(_x, _y, x, y) < 25)
       {
+        beni._hatName = _selectedItem._name;
+        print (_selectedItem._name);
         beni._hat = _selectedItem._actor._sprite;
         _selectedItem._owned = true;
 
@@ -94,7 +97,7 @@ class room_hatshop extends roomActor
 
   void whenEnteredFrom(String lastRoomName)
   {
-    //if (lastRoomName.equals("plaza"))
+    if (lastRoomName.equals("plaza"))
     {
       broadcast("movebeni 100,400");
 
@@ -107,7 +110,6 @@ class room_hatshop extends roomActor
         }
       }
 
-
       buildShelves();
     }
   }
@@ -117,7 +119,13 @@ class room_hatshop extends roomActor
     if (actionTokens[0].equals("buy"))
     {
       buildShelves();
-    } else
+    }
+    else if (actionTokens[0].equals("leaveroom") && actionTokens[0].equals(_name))
+    {
+      _furniture.clear();
+    }
+  
+    else
     {
       super.executeAction(actionTokens);
     }

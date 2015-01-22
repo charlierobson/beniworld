@@ -9,8 +9,6 @@ class item
   
   public actor _actor;
 
-  PImage _image;
-
   public item(String name, int price, String description, String whenClicked)
   {
     _name = name;
@@ -29,8 +27,8 @@ class item
 
 class inventory
 {
-  ArrayList<item> _items;  
-  
+  ArrayList<item> _items;
+
   public ArrayList<item> items()
   {
     return _items;

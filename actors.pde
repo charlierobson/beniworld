@@ -6,6 +6,8 @@ class actor implements Comparable<actor>
 
   public PShape _sprite;
 
+  public clickTarget _hitBox;
+
   public actor()
   {
     _z = 100;
@@ -190,29 +192,15 @@ class itemActor extends furnitureActor
 {
   int _price;
   String _description;
-  String _clickedAction;
 
   public itemActor(String imageFilename, int x, int y, String description, int price, String clickedAction)
   {
     super(imageFilename, x, y);
 
-    _clickedAction = clickedAction;
+    _hitBox = new circularClickTarget(_x, _y, 40, clickedAction);
+    
     _description = description;
     _price = price;
-  }
-
-  void executeAction(String[] actionTokens)
-  {
-    if (actionTokens[0].equals("click"))
-    {
-      int x = Integer.parseInt(actionTokens[1]);
-      int y = Integer.parseInt(actionTokens[2]);
-      float d = dist(_x, _y, x, y);
-      if (d < 40)
-      {
-        broadcast(_clickedAction);
-      }
-    }
   }
 }
 

@@ -47,19 +47,21 @@ class room_closet extends roomActor
       int shelfPosition = 0;
       for (String hatName : _purchasedHats)
       {
-        item it = hats.findItemByName(hatName);
+        if (!hatName.equals(beni._hatName))
+        {
+          item it = hats.findItemByName(hatName);
 
-        // there are 4 items per shelf. shelfPosition/4 gives us the shelf number,
-        // shelfPosition%4 gives us the position upon a particular shelf.
-        int shelfNumber = shelfPosition / 4;
-        int shelfSlot = shelfPosition % 4;
+          // there are 4 items per shelf. shelfPosition/4 gives us the shelf number,
+          // shelfPosition%4 gives us the position upon a particular shelf.
+          int shelfNumber = shelfPosition / 4;
+          int shelfSlot = shelfPosition % 4;
 
-        int itemX = shelfStart[shelfNumber] + shelfSlot * 80;
+          int itemX = shelfStart[shelfNumber] + shelfSlot * 80;
 
-        it._actor = new itemActor(it.imageName(), itemX, 180, it._description, it._price, it._whenClicked);
+          it._actor = new itemActor(it.imageName(), itemX, 180, it._description, it._price, it._whenClicked);
 
-        _furniture.add(it._actor);
-
+          _furniture.add(it._actor);
+        }
         ++shelfPosition;
       }
     }

@@ -1,7 +1,8 @@
 class beniActor extends characterActor
 {
   public PShape _hat;
-
+  public String _hatName;
+  
   public beniActor()
   {
     super("beni");
